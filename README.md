@@ -23,6 +23,8 @@ A message will appear showing that the service is available on port 3000.
 The only input for this function is the frequency to study in KHz:\
 Example: http://localhost:3000/?frequency=550
 
+The resulting JSON file will have an array of objects, representing the groundwave field that a model AM radiator would provide at various distances and ground conductivities.
+The model AM radiator operates at 1 kW of power and radiates a field of 100 mV/m at 1 km through the air.  The distances that are tested are those that were chosen for the historical charts, and the conductivites are limited to those that appear in the [m3 and r2 conductivity datasets](../readm3/).
 
 # Reflections
 It's worth noting that while the gwave program is capable of directly solving for any specific frequency, distance, and conductivity, the FCC chose to generate tables and then interpolate within the tables.  

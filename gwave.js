@@ -835,9 +835,9 @@ function gwaveDistance(input, resolution) {
 
 
 function gw_chart(frequency) {
-	var chart = {};
+	var chart = [];
 	am_sigmas.forEach( (sigma) => {
-		chart[sigma] = [];
+		let curve = {sigma: sigma, fields: []};
 		am_distances.forEach( (dist) => {
 			const input = {
 				sigma: sigma,
@@ -847,8 +847,9 @@ function gw_chart(frequency) {
 				field: 100,
 				distance: dist
 			};
-			chart[sigma].push({dist: dist, field: gwave(input).output});
+			curve.fields.push({dist: dist, field: gwave(input).output});
 		});
+        chart.push(curve);
 	});
 	return chart;
 }
