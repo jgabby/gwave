@@ -27,4 +27,4 @@ The resulting JSON file will have an array of objects, representing the groundwa
 The model AM radiator operates at 1 kW of power and radiates a field of 100 mV/m at 1 km through the air.  The distances that are tested are those that were chosen for the historical charts, and the conductivites are limited to those that appear in the [m3 and r2 conductivity datasets](https://github.com/jgabby/readm3).
 
 # Reflections
-It's worth noting that while the gwave program is capable of directly solving for any specific frequency, distance, and conductivity, the FCC chose to generate tables and then interpolate within the tables.  
+It's worth noting that while the gwave program is capable of directly solving for any specific frequency, distance, and conductivity, the FCC chose to generate tables and then interpolate within the tables.  This method is quite fast but can result program faults in cases where the inputs are not properly bound to the chartspace; examples can include non-standard conductivity values.  
