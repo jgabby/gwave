@@ -20,7 +20,7 @@ A message will appear showing that the service is available on port 3000.
 
 
 # Usage
-The only input for this function is the frequency to study in KHz:
+The only input for this function is the frequency to study in KHz:\
 Example: http://localhost:3000/?frequency=550
 
 
